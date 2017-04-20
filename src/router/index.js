@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import NoticiasList from '@/components/noticias_list'
+import PostsList from '@/components/posts_list'
+import PostShow from '@/components/post_show'
 
 Vue.use(Router)
 
@@ -13,9 +14,14 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/noticias/',
-      name: 'noticias_list',
-      component: NoticiasList
+      path: '/posts',
+      name: 'posts_list',
+      component: PostsList
+    },
+    {
+      path: '/posts/:id',
+      name: 'posts_show',
+      component: PostShow
     }
   ]
 })
