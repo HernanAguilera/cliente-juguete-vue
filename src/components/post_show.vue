@@ -1,5 +1,6 @@
 <template>
-    <h2>Post :{{post.id}}</h2>
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
 </template>
 
 <script>
@@ -10,12 +11,14 @@ export default {
       post: {}
     }
   },
-  created: () => {
+  created: function () {
     let id = 10
     this.$http.get('https://jsonplaceholder.typicode.com/posts/' + id)
-    .them(function (res) {
+    .then(function (res) {
       console.log(res)
       this.post = res.data
+    }, function (error) {
+      console.log('Error', error)
     })
   }
 }
