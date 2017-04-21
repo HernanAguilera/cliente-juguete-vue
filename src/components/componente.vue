@@ -1,5 +1,5 @@
 <template>
-<!-- código html -->
+<!-- có digo html -->
 </template>
 
 <script>
