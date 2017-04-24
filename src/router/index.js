@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import PostsList from '@/components/posts_list'
-import PostShow from '@/components/post_show'
+import index from '@/components/index'
 import PostForm from '@/components/post_form'
+import Posts from '@/components/posts'
+import Post from '@/components/post'
+import PostDelete from '@/components/post/delete'
 
 Vue.use(Router)
 
@@ -12,13 +13,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'index',
+      component: index
     },
     {
       path: '/posts',
-      name: 'posts_list',
-      component: PostsList
+      name: 'posts',
+      component: Posts
     },
     {
       path: '/posts/create',
@@ -28,12 +29,17 @@ export default new Router({
     {
       path: '/posts/:id',
       name: 'posts_show',
-      component: PostShow
+      component: Post
     },
     {
       path: '/posts/:id/edit',
       name: 'posts_edit',
       component: PostForm
+    },
+    {
+      path: '/posts/:id/delete',
+      name: 'posts_delete',
+      component: PostDelete
     }
   ]
 })

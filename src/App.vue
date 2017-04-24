@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <ul>
+      <li><router-link :to="{ name: 'index' }">Home</router-link></li>
+      <li><router-link :to="{ name: 'posts' }">Posts</router-link></li>
+      <li><router-link :to="{ name: 'posts_create' }">Nuevo post</router-link></li>
+    </ul>
     <router-view></router-view>
   </div>
 </template>
