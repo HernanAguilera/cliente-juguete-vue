@@ -49,6 +49,7 @@ export default {
       this.resource.save(this.post)
       .then(function (res) {
         console.log(res)
+        this.$router.push('/posts')
       },
       function (error) {
         console.log('error', error)
@@ -59,6 +60,7 @@ export default {
       this.resource.update({id: this.post.id}, this.post)
       .then(function (res) {
         console.log(res)
+        this.$router.push('/posts')
       },
       function (error) {
         console.log(error)

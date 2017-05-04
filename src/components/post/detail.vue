@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import mixins from '@/components/mixins.js'
+  import mixins from '@/components/post/mixins.js'
   import deletePost from '@/components/post/delete'
 
   export default {

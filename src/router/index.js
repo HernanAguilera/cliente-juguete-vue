@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/components/index'
-import PostForm from '@/components/post_form'
-import Posts from '@/components/posts'
-import Post from '@/components/post'
+import PostForm from '@/components/post/form'
+import Posts from '@/components/post/list'
+import Post from '@/components/post/detail'
 import PostDelete from '@/components/post/delete'
 
 Vue.use(Router)

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import mixins from '@/components/mixins.js'
+import mixins from '@/components/post/mixins.js'
 export default {
   props: {
     confirmacion: {
@@ -35,6 +35,7 @@ export default {
       this.resource.delete({id: this.post.id})
       .then(function (res) {
         console.log('delete', res)
+        this.$router.push('/posts')
       },
       function (error) {
         console.log(error)
